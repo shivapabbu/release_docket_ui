@@ -1,0 +1,29 @@
+<section fxLayout="row wrap" fxLayoutAlign="center center">
+  <mat-card fxFlex="500px" fxFlex.xs="100%">
+
+    <mat-card-title>Delete employee</mat-card-title>
+    <mat-card-content>
+      <div fxLayout="column wrap" fxLayoutGap="40px">
+        <div fxLayout="row wrap" fxFlex>
+          <div fxFlex><strong>Employee's name:</strong></div>
+          <div fxFlex>{{employee?.empName}}</div>
+        </div>
+
+        <div fxLayout="row wrap" fxFlex>
+          <div fxFlex><strong>Release Date:</strong></div>
+          <div fxFlex>{{employee?.releaseDate | date}}</div>
+        </div>
+
+        <div fxLayout="row wrap" fxFlex>
+          <div fxFlex><strong>SAP ID:</strong></div>
+          <div fxFlex>{{employee?.sapId}}</div>
+        </div>
+      </div>
+    </mat-card-content>
+    <mat-card-actions align="center">
+      <button mat-raised-button color="primary" (click)="deleteEmployee()">Delete</button>
+      <button type="button" mat-raised-button color="warn" (click)="onCancel()">Cancel</button>
+    </mat-card-actions>
+
+  </mat-card>
+</section>

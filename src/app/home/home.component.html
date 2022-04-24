@@ -1,0 +1,15 @@
+<section fxLayout="column" fxFlexAlign="stretch"> 
+    <div fxFlexAlign="center"> 
+        <p>Welcome HCL Release Docket Application</p> 
+    </div>
+
+    
+    <mat-tab-group (selectedTabChange)="executeSelectedChange($event)">
+        <mat-tab label="Relase Docket"> 
+          <p>We are going to diplay Release Docket List</p> 
+        </mat-tab>
+        <mat-tab label="Stakeholders">
+           <p>We are going to display Stack holders List</p>
+          </mat-tab>       
+      </mat-tab-group>
+</section>

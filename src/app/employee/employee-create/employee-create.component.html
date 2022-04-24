@@ -1,0 +1,131 @@
+<section fxLayout="row wrap" fxLayoutAlign="center center">
+    <mat-card fxFlex="500px" fxFlex.xs="100%">
+        <mat-card-title>Create a new employee</mat-card-title>
+        <form [formGroup]="employeeForm" autocomplete="off" novalidate (ngSubmit)="createEmployee(employeeForm.value)" fxLayout="column wrap"
+            fxLayoutAlign="center center" fxLayoutGap="10px">
+            <mat-card-content>
+                  <mat-form-field>
+                    <input matInput type="text" placeholder="SAP ID" formControlName="sapId" id="sapId">
+                    <mat-hint align="end">Not more then 60 characters long.</mat-hint>
+                    <mat-error *ngIf="hasError('sapId', 'required')">SAP ID is required</mat-error>
+                    <mat-error *ngIf="hasError('sapId', 'maxlength')">You have more than 60 characters</mat-error>
+                  </mat-form-field>
+                  <mat-form-field>
+                    <input matInput type="text" placeholder="Fresher/Lateral" formControlName="fresherOrLateral" id="fresherOrLateral">
+                    <mat-hint align="end">Not more then 60 characters long.</mat-hint>
+                    <mat-error *ngIf="hasError('fresherOrLateral', 'required')">Fresher/Lateral is required</mat-error>
+                    <mat-error *ngIf="hasError('fresherOrLateral', 'maxlength')">You have more than 60 characters</mat-error>
+                  </mat-form-field>
+                  <mat-form-field>
+                    <input matInput type="text" placeholder="Employee's name" formControlName="empName" id="empName">
+                    <mat-hint align="end">Not more then 60 characters long.</mat-hint>
+                    <mat-error *ngIf="hasError('empName', 'required')">Employee's name is required</mat-error>
+                    <mat-error *ngIf="hasError('empName', 'maxlength')">You have more than 60 characters</mat-error>
+                  </mat-form-field>
+                  <mat-form-field>
+                    <input matInput type="text" placeholder="ProjectName name" formControlName="projectName" id="projectName">
+                    <mat-hint align="end">Not more then 60 characters long.</mat-hint>
+                    <mat-error *ngIf="hasError('projectName', 'required')">ProjectName is required</mat-error>
+                    <mat-error *ngIf="hasError('projectName', 'maxlength')">You have more than 60 characters</mat-error>
+                  </mat-form-field>
+                  <mat-form-field>
+                    <input matInput type="text" placeholder="Band" formControlName="band" id="band">
+                    <mat-hint align="end">Not more then 60 characters long.</mat-hint>
+                    <mat-error *ngIf="hasError('band', 'required')">Band is required</mat-error>
+                    <mat-error *ngIf="hasError('band', 'maxlength')">You have more than 60 characters</mat-error>
+                  </mat-form-field>
+                  <mat-form-field>
+                    <input matInput [matDatepicker]="picker" placeholder="Choose Release Date" formControlName="releaseDate" id="releaseDate" 
+                        readonly (click)="picker.open()">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                  </mat-form-field>
+                  <mat-form-field>
+                    <input matInput [matDatepicker]="picker2" placeholder="Choose Delimitation Date In RAS" formControlName="delimitationDateInRAS" id="delimitationDateInRAS" 
+                        readonly (click)="picker2.open()">
+                    <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                    <mat-datepicker #picker2></mat-datepicker>
+                  </mat-form-field>
+                  <mat-form-field>
+                    <input matInput type="text" placeholder="Reason for Release" formControlName="reasonforRelease" id="reasonforRelease">
+                    <mat-hint align="end">Not more then 60 characters long.</mat-hint>
+                    <mat-error *ngIf="hasError('reasonforRelease', 'required')">Reason for Release is required</mat-error>
+                    <mat-error *ngIf="hasError('reasonforRelease', 'maxlength')">You have more than 60 characters</mat-error>
+                  </mat-form-field>
+                  <mat-form-field>
+                    <input matInput type="text" placeholder="Part Of Rotation" formControlName="partOfRotation" id="partOfRotation">
+                    <mat-hint align="end">Not more then 60 characters long.</mat-hint>
+                    <mat-error *ngIf="hasError('partOfRotation', 'required')">Part Of Rotation is required</mat-error>
+                    <mat-error *ngIf="hasError('partOfRotation', 'maxlength')">You have more than 60 characters</mat-error>
+                  </mat-form-field>
+                  <mat-form-field>
+                    <input matInput type="text" placeholder="Performance Feedback" formControlName="performanceFeedback" id="performanceFeedback">
+                    <mat-hint align="end">Not more then 60 characters long.</mat-hint>
+                    <mat-error *ngIf="hasError('performanceFeedback', 'required')">Performance Feedback is required</mat-error>
+                    <mat-error *ngIf="hasError('performanceFeedback', 'maxlength')">You have more than 60 characters</mat-error>
+                  </mat-form-field>
+                  <mat-form-field>
+                    <input matInput type="text" placeholder="No Of Months Worked" formControlName="noOfMonthsWorked" id="noOfMonthsWorked">
+                    <mat-hint align="end">Not more then 60 characters long.</mat-hint>
+                    <mat-error *ngIf="hasError('noOfMonthsWorked', 'required')">No Of Months Worked is required</mat-error>
+                    <mat-error *ngIf="hasError('noOfMonthsWorked', 'maxlength')">You have more than 60 characters</mat-error>
+                  </mat-form-field>
+                  <mat-form-field>
+                    <input matInput type="text" placeholder="Board Skil" formControlName="boardSkil" id="boardSkil">
+                    <mat-hint align="end">Not more then 60 characters long.</mat-hint>
+                    <mat-error *ngIf="hasError('boardSkil', 'required')">Board Skil is required</mat-error>
+                    <mat-error *ngIf="hasError('boardSkil', 'maxlength')">You have more than 60 characters</mat-error>
+                  </mat-form-field>
+                  <mat-form-field>
+                    <input matInput type="text" placeholder="Skill Set" formControlName="skillSet" id="skillSet">
+                    <mat-hint align="end">Not more then 60 characters long.</mat-hint>
+                    <mat-error *ngIf="hasError('skillSet', 'required')">Skill Set is required</mat-error>
+                    <mat-error *ngIf="hasError('skillSet', 'maxlength')">You have more than 60 characters</mat-error>
+                  </mat-form-field>
+                  <mat-form-field>
+                    <input matInput type="text" placeholder="Exp In Yrs" formControlName="expInYrs" id="expInYrs">
+                    <mat-hint align="end">Not more then 60 characters long.</mat-hint>
+                    <mat-error *ngIf="hasError('expInYrs', 'required')">Exp In Yrs is required</mat-error>
+                    <mat-error *ngIf="hasError('expInYrs', 'maxlength')">You have more than 60 characters</mat-error>
+                  </mat-form-field>
+                  <mat-form-field>
+                    <input matInput type="text" placeholder="Contact Number" formControlName="contactNumber" id="contactNumber">
+                    <mat-hint align="end">Not more then 60 characters long.</mat-hint>
+                    <mat-error *ngIf="hasError('contactNumber', 'required')">Contact Number is required</mat-error>
+                    <mat-error *ngIf="hasError('contactNumber', 'maxlength')">You have more than 60 characters</mat-error>
+                  </mat-form-field>
+                  <mat-form-field>
+                    <input matInput type="text" placeholder="Current Location" formControlName="currentLocation" id="currentLocation">
+                    <mat-hint align="end">Not more then 60 characters long.</mat-hint>
+                    <mat-error *ngIf="hasError('currentLocation', 'required')">CurrentLocation is required</mat-error>
+                    <mat-error *ngIf="hasError('currentLocation', 'maxlength')">You have more than 60 characters</mat-error>
+                  </mat-form-field>
+                   
+                  <mat-form-field>
+                    <input matInput type="text" placeholder="Leave Plan" formControlName="leavePlan" id="leavePlan">
+                    <mat-hint align="end">Not more then 60 characters long.</mat-hint>
+                    <mat-error *ngIf="hasError('leavePlan', 'required')">Leave Plan is required</mat-error>
+                    <mat-error *ngIf="hasError('leavePlan', 'maxlength')">You have more than 60 characters</mat-error>
+                  </mat-form-field>
+                   
+                  <mat-form-field>
+                    <input matInput type="text" placeholder="Release Requestor" formControlName="releaseRequestor" id="releaseRequestor">
+                    <mat-hint align="end">Not more then 100 characters long.</mat-hint>
+                    <mat-error *ngIf="hasError('releaseRequestor', 'required')">Release Requestor is required</mat-error>
+                    <mat-error *ngIf="hasError('releaseRequestor', 'maxlength')">You have more than 100 characters</mat-error>
+                  </mat-form-field>
+
+                  <mat-form-field>
+                    <input matInput type="text" placeholder="Status" formControlName="status" id="status">
+                    <mat-hint align="end">Not more then 100 characters long.</mat-hint>
+                    <mat-error *ngIf="hasError('status', 'required')">Status is required</mat-error>
+                    <mat-error *ngIf="hasError('status', 'maxlength')">You have more than 100 characters</mat-error>
+                  </mat-form-field>
+            </mat-card-content>
+            <mat-card-actions>
+                <button mat-raised-button color="primary" [disabled]="!employeeForm.valid">Create</button>
+                <button type="button" mat-raised-button color="warn" (click)="onCancel()">Cancel</button>
+            </mat-card-actions>
+        </form>
+    </mat-card>
+</section>

@@ -1,0 +1,89 @@
+<section fxLayout="row wrap" fxLayoutAlign="center center">
+    <mat-card fxFlex="500px" fxFlex.xs="100%">
+        <mat-card-title>Details for {{employee?.empName}}</mat-card-title>
+        <mat-card-content>
+          <div fxLayout="column wrap" fxLayoutGap="40px">
+            <div fxLayout="row wrap" fxFlex>
+              <div fxFlex><strong>SAP ID:</strong></div>
+              <div fxFlex>{{employee?.sapId}}</div>
+            </div>
+            <div fxLayout="row wrap" fxFlex>
+              <div fxFlex><strong>Fresher/Lateral:</strong></div>
+              <div fxFlex>{{employee?.fresherOrLateral}}</div>
+            </div>
+            <div fxLayout="row wrap" fxFlex>
+              <div fxFlex><strong>Employee's name:</strong></div>
+              <div fxFlex>{{employee?.empName}}</div>
+            </div>
+            <div fxLayout="row wrap" fxFlex>
+              <div fxFlex><strong>Project Name:</strong></div>
+              <div fxFlex>{{employee?.projectName}}</div>
+            </div>
+            <div fxLayout="row wrap" fxFlex>
+              <div fxFlex><strong>Band:</strong></div>
+              <div fxFlex>{{employee?.band}}</div>
+            </div>
+            <div fxLayout="row wrap" fxFlex>
+              <div fxFlex><strong>Release Date:</strong></div>
+              <div fxFlex>{{employee?.releaseDate | date}}</div>
+            </div>
+            <div fxLayout="row wrap" fxFlex>
+              <div fxFlex><strong>Delimitation Date In RAS:</strong></div>
+              <div fxFlex>{{employee?.delimitationDateInRAS | date}}</div>
+            </div>
+            <div fxLayout="row wrap" fxFlex>
+              <div fxFlex><strong>Reason for Release:</strong></div>
+              <div fxFlex>{{employee?.reasonforRelease}}</div>
+            </div>
+            <div fxLayout="row wrap" fxFlex>
+              <div fxFlex><strong>Part Of Rotation:</strong></div>
+              <div fxFlex>{{employee?.partOfRotation}}</div>
+            </div>
+            <div fxLayout="row wrap" fxFlex>
+              <div fxFlex><strong>Performance Feedback:</strong></div>
+              <div fxFlex>{{employee?.performanceFeedback}}</div>
+            </div>
+            <div fxLayout="row wrap" fxFlex>
+              <div fxFlex><strong>No Of Months Worked:</strong></div>
+              <div fxFlex>{{employee?.noOfMonthsWorked}}</div>
+            </div>
+            <div fxLayout="row wrap" fxFlex>
+              <div fxFlex><strong>Board Skil:</strong></div>
+              <div fxFlex>{{employee?.boardSkil}}</div>
+            </div>
+            <div fxLayout="row wrap" fxFlex>
+              <div fxFlex><strong>Skill Set:</strong></div>
+              <div fxFlex>{{employee?.skillSet}}</div>
+            </div>
+            <div fxLayout="row wrap" fxFlex>
+              <div fxFlex><strong>Exp In Yrs:</strong></div>
+              <div fxFlex>{{employee?.expInYrs}}</div>
+            </div>
+            <div fxLayout="row wrap" fxFlex>
+              <div fxFlex><strong>Contact Number:</strong></div>
+              <div fxFlex>{{employee?.contactNumber}}</div>
+            </div>
+            <div fxLayout="row wrap" fxFlex>
+              <div fxFlex><strong>Current Location:</strong></div>
+              <div fxFlex>{{employee?.currentLocation}}</div>
+            </div>
+            <div fxLayout="row wrap" fxFlex>
+              <div fxFlex><strong>Leave Plan:</strong></div>
+              <div fxFlex>{{employee?.leavePlan}}</div>
+            </div>
+            <div fxLayout="row wrap" fxFlex>
+              <div fxFlex><strong>Release Requestor:</strong></div>
+              <div fxFlex>{{employee?.releaseRequestor}}</div>
+            </div>
+            <div fxLayout="row wrap" fxFlex>
+              <div fxFlex><strong>Status:</strong></div>
+              <div fxFlex>{{employee?.status}}</div>
+            </div>
+                                   
+          </div>
+        </mat-card-content>
+        <mat-card-actions>    
+          <button type="button" mat-raised-button color="warn" (click)="onCancel()">Cancel</button>
+      </mat-card-actions>
+      </mat-card>
+</section>
